@@ -10,11 +10,12 @@ namespace TestMaximum
             Console.WriteLine(CheckMaximumInt.welcome());
 
 
-            // Take input from the user
-            int outputInt = CheckMaximumInt.MaxIntNumber(12, 23, 34);
+            // Passing input with max number at first place
+            int outputInt1 = CheckMaximumInt.MaxIntNumber(34, 23, 12);
+
 
             // Print output
-            Console.WriteLine(outputInt);
+            Console.WriteLine(outputInt1);
         }
     }
 }
