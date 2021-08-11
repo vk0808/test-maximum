@@ -6,7 +6,15 @@ namespace TestMaximum
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Test Maximum of 3 Variables Program\n");
+            // Display welcome message
+            Console.WriteLine(CheckMaximumInt.welcome());
+
+
+            // Take input from the user
+            int outputInt = CheckMaximumInt.MaxIntNumber(12, 23, 34);
+
+            // Print output
+            Console.WriteLine(outputInt);
         }
     }
 }
