@@ -16,9 +16,13 @@ namespace TestMaximum
             // Passing input with max number at second place
             int outputInt2 = CheckMaximumInt.MaxIntNumber(129, 489, 19);
 
+            // Passing input with max number at third place
+            int outputInt3 = CheckMaximumInt.MaxIntNumber(64, 102, 108);
+
             // Print output
             Console.WriteLine($"Max of (34, 23, 12) is {outputInt1}");
             Console.WriteLine($"Max of (129, 489, 19) is {outputInt2}");
+            Console.WriteLine($"Max of (64, 102, 108) is {outputInt3}");
         }
     }
 }
