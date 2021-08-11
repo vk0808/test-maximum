@@ -11,18 +11,18 @@ namespace TestMaximum
 
 
             // Passing input with max number at first place
-            double outputInt1 = CheckMaximumFloat.MaxFloatNumber(3.4, 2.3, 1.2);
+            string outputInt1 = CheckMaximumString.MaxStringNumber("34", "23", "12");
 
             // Passing input with max number at second place
-            double outputInt2 = CheckMaximumFloat.MaxFloatNumber(12.9, 48.9, 1.9);
+            string outputInt2 = CheckMaximumString.MaxStringNumber("129", "489", "19");
 
             // Passing input with max number at third place
-            double outputInt3 = CheckMaximumFloat.MaxFloatNumber(6.4, 12.0, 18.0);
+            string outputInt3 = CheckMaximumString.MaxStringNumber("64", "120", "180");
 
             // Print output
-            Console.WriteLine($"Max of (3.4, 2.3, 1.2) is {outputInt1}");
-            Console.WriteLine($"Max of (12.9, 48.9, 1.9) is {outputInt2}");
-            Console.WriteLine($"Max of (6.4, 12.0, 18.0) is {outputInt3}");
+            Console.WriteLine($"Max of (\"34\", \"23\", \"12\") is {outputInt1}");
+            Console.WriteLine($"Max of (\"129\", \"489\", \"19\") is {outputInt2}");
+            Console.WriteLine($"Max of (\"64\", \"120\", \"180\") is {outputInt3}");
         }
     }
 }
