@@ -19,7 +19,7 @@ namespace TestMaximum
 
 
             // Print output
-            Console.WriteLine($"Max value is {outputInt}");
+            genInt.PrintMaxValue();
         }
     }
 }

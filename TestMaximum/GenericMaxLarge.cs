@@ -41,5 +41,11 @@ namespace TestMaximum
         {
             return "Welcome to Test Maximum Program";
         }
+
+        public void PrintMaxValue()
+        {
+            var max = MaxValue(this.value);
+            Console.WriteLine($"Max value is {max}");
+        }
     }
 }
