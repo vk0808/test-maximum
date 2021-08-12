@@ -4,31 +4,6 @@ namespace TestMaximum
 {
     class Program 
     {
-        // Generic method with Comparable interface from System
-        static T MaxMethod<T>(T first, T second, T third) where T : IComparable
-        {
-            if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0 ||
-                first.CompareTo(second) >= 0 && first.CompareTo(third) > 0 ||
-                first.CompareTo(second) > 0 && first.CompareTo(third) >= 0)
-            {
-                return first;
-            }
-            if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0 ||
-                second.CompareTo(first) >= 0 && second.CompareTo(third) > 0 ||
-                second.CompareTo(first) > 0 && second.CompareTo(third) >= 0)
-            {
-                return second;
-            }
-            if (third.CompareTo(first) > 0 && third.CompareTo(second) > 0 ||
-                third.CompareTo(first) >= 0 && third.CompareTo(second) > 0 ||
-                third.CompareTo(first) > 0 && third.CompareTo(second) >= 0)
-            {
-                return third;
-            }
-
-            throw new Exception("All three values are same");
-        }
-
 
         static void Main(string[] args)
         {
@@ -37,23 +12,24 @@ namespace TestMaximum
 
 
             // Passing integer input with max number at first place
-            int outputInt1 = MaxMethod<int>(34, 34, 12);
-            //int outputInt2 = MaxMethod<int>(34, 12, 34);
-            //int outputInt3 = MaxMethod<int>(12, 34, 12);
+            GenericMax<int> genInt = new GenericMax<int>(34, 23, 12);
+            int outputInt1 = genInt.MaxMethod();
 
 
             // Passing double input with max number at second place
-            double outputInt2 = MaxMethod<double>(12.9, 48.9, 1.9);
+            GenericMax<double> genFloat = new GenericMax<double>(12.9, 48.9, 1.9);
+            double outputInt2 = genFloat.MaxMethod();
 
 
             // Passing string input with max number at third place
-            string outputInt3 = MaxMethod<string>("apple", "peach", "banana");
+            GenericMax<string> genString = new GenericMax<string>("apple", "banana", "peach");
+            string outputInt3 = genString.MaxMethod();
 
 
             // Print output
             Console.WriteLine($"Max of 3 int (34, 23, 12) is {outputInt1}");
             Console.WriteLine($"Max of 3 double (12.9, 48.9, 1.9) is {outputInt2}");
-            Console.WriteLine($"Max of 3 string (apple, peach, banana) is {outputInt3}");
+            Console.WriteLine($"Max of 3 string (apple, banana, peach ) is {outputInt3}");
         }
     }
 }
